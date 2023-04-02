@@ -1,0 +1,6 @@
+
+.appointment_container{
+display:grid;
+align-items: center;
+grid-template-rows: 40vh 10vh;
+}

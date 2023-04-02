@@ -1,0 +1,154 @@
+.header{
+    background-color: black;
+    height:10vh;
+    width:100vw;
+    text-align: center;
+    display:grid;
+    grid-template-columns:2vw 15vw 70vw 13vw;
+    grid-template-rows: 10vh;
+    align-items: center;
+  }
+  .page_title{
+    font-size:2.5rem;
+    font-weight:bold;
+    text-align: center;
+  }
+  .page_title_med{
+    font-size:2rem;
+    font-weight:bold;
+    text-align: center;
+  }
+  .down_five{
+    margin-top:5vh;
+  }
+  .page_container{
+    overflow: hidden;
+    background-color: rgb(5, 114, 133);
+    min-height: 90vh;
+    width:100vw;
+    position:absolute;
+    display:grid;
+    justify-content: center;
+  }
+  .header_title{
+    color:white;
+    line-height: 10vh;
+    font-size:1.6rem;
+  }
+  video{
+    width:90%;
+    height:auto;
+  }
+  .drop_down_container{
+  margin-left:2vw;
+  width:10vw;
+  height:4vh;
+  }
+  .drop_down_menu{
+    margin-top:10vh;
+    width:100vw;
+    height:90vh;
+    background-color: black;
+    position:absolute;
+    z-index: 2;
+    right:100vw;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    display:none;
+    outline:1px solid black;
+  }
+  .profile_icon_container{
+    height:5vh;
+    width:10vw;
+  }
+  .profile_icon_container:active{
+    width:9vw;
+    margin-left:.5vw;
+    margin-top:1vw;
+
+  }
+
+   input{
+    display:block;
+    width:60vw;
+    height:6vh;
+    font-size:1.5rem;
+    border:0;
+    text-align: left;
+    margin-left:auto;
+    margin-right:auto;
+    border: solid black;
+    border-width: 0px 0px 1px 0px;
+  }
+  input:focus{
+    outline:0;
+  }
+  label{
+    font-size: 1.7rem;
+    color:white;
+  }
+
+.button_container{
+  width:100vw;
+  display:flex;
+  justify-content: center;
+
+}
+
+  .button_t1{
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    background-color: black;
+    color:white;
+    border: 0;
+    font-size:1.5rem;
+    width:65vw;
+    height:10vh;
+    margin-top:2vh;
+}
+.button_t2{
+  display:inline-block;
+  margin-left: auto;
+  margin-right:auto;
+  background-color: black;
+  color:white;
+  border: 0;
+  font-size:1.5rem;
+  width:40vw;
+  height:10vh;
+  margin-top:2vh;
+}
+.button_t3{
+  width:30vw;
+  height:6vh;
+  border:0;
+  background-color: blue;
+  color:white;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+}
+.button_transparent{
+  border:0;
+  background-color: white;
+  color:rgba(0, 0, 0, 0.323);
+  font-size:1rem
+}
+.button_t4{
+  width:30vw;
+  height:6vh;
+  border:none;
+  display:inline-block;
+  border-radius: 2rem;
+  background-color: gray;
+  opacity:50%;
+  font-size:1.5rem;
+  color:white;
+}
+
+.space_left{
+margin-left:3vw;
+}
+.space_right{
+margin-right:3vw;
+}

@@ -1,0 +1,96 @@
+.login_panel{
+    background-color: white;
+    width:80vw;
+    height:60vh;
+    margin-top:-100vh;
+    border-radius:2rem;
+    overflow: hidden;
+    animation:login_panel_slide_in 1s forwards;
+}
+.login_title{
+    font-size:1.8rem;
+    color:blue;
+    width:0vw;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+    type_writer 2s 1s forwards;
+    text-align: center;
+    display:inline-block;
+    margin-top:4vh;
+
+}
+.login_title_container{
+    width:80vw;
+
+    text-align: center;
+}
+
+.bold_span{
+    opacity: 0;
+    animation-delay: 500ms;
+}
+.good_span{
+    opacity: 0;
+    animation-delay: 250ms;
+}
+.selection_menu_button_container{
+    display:grid;
+    overflow: hidden;
+    margin-top:5vh;
+    grid-template-columns: 40vw 40vw;
+}
+.selection_menu_button_container > button{
+border:0;
+background-color: transparent;
+font-size:1.5rem;
+font-weight: 650;
+overflow:hidden;
+
+}
+
+.button_selected{
+    color:red;
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+    line-height: 2rem;
+}
+.login_input_container{
+    opacity: 0;
+    animation:fade_in 3s 3s forwards;
+    margin-top: 10vh;
+    height:30vh;
+}
+.login_input_container > input{
+margin-top:2vh;
+}
+.login_button_container{
+    margin-top:10vh;
+    animation:login_buttons_slide_up 1s 3s forwards;
+    justify-content: center;
+    display:grid;
+    grid-template-columns: 40vw auto;
+}
+#confirm_password{
+opacity:0;
+animation-duration: 1s;
+display:none;
+animation-fill-mode: forwards;
+}
+
+#login_button{
+    animation:login_selector_slide 2s 1s forwards;
+    position:absolute;
+    left:-100vw;
+    line-height: 2rem;
+    top:25vh;
+    transform:rotate(-180deg);
+}
+#register_button{
+    line-height: 2rem;
+    top:25vh;
+    position:absolute;
+    right:-100vw;
+    animation:register_selector_slide 2s 1s  forwards;
+    transform:rotate(180deg);
+}
