@@ -3,6 +3,14 @@ import { UserContext } from '../../../../Context'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 export default function Appointments(){
+const user = useContext(UserContext)
+let request_link:string
+if(user.user.logged_in==false){
+request_link = '/login'
+}
+else{
+    request_link = '/appointments/request_appointment'
+}
 
 
     return(
@@ -11,7 +19,7 @@ export default function Appointments(){
         Appointments
         </div>
         <div className='appointment_button_container'>
-            <Link to={'/appointments/request_appointment'}><button className="button_t1 down_five">Request Appointment</button></Link>
+            <Link to={request_link}><button className="button_t1 down_five">Request Appointment</button></Link>
             <button className="button_t1 down_five">Check Existing</button>
         </div>
     </div>)

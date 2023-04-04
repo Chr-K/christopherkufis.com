@@ -2,8 +2,8 @@ import { SetStateAction,Dispatch, createContext, useState,ReactNode } from "reac
 
 export type User = {
     logged_in:boolean,
-    email:string,
-    phone?:number,
+    email?:string | null,
+    phone?:number | null,
 }
 
 export interface UserContextInterface{
@@ -13,7 +13,8 @@ export interface UserContextInterface{
 
 const defaultState = {
     user: {
-        logged_in:false
+        logged_in:false,
+        
     },
     setUser: (user:User) =>{}
 } as UserContextInterface
@@ -27,7 +28,9 @@ type User_Provide_props = {
 
 export default function User_Provider({children} : User_Provide_props){
     const [user,setUser] = useState<User>({
-        logged_in:false
+        logged_in:false,
+        phone:null,
+        email:null,
     })
 
     return(
