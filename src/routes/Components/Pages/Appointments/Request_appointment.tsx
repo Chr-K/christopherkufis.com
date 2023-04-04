@@ -2,7 +2,7 @@ import './appointments.css'
 import Selector from '../../selector/Selector'
 import type { options } from '../../selector/Selector'
 import { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 
 export default function Request_appointment(){
     const appointment_type_options:options = {option:['Interview','Contract Proposal','Other']}
@@ -108,6 +108,7 @@ return(
     <button onClick={()=>{ampm_switch('AM')}} id='am_button' className='button_t4 space_right down_five'>AM</button>
     <button onClick={()=>{ampm_switch('PM')}}  id='pm_button'className='button_t4 space_left down_five'>PM</button>
     </div>
+    <Link to={'/appointments/appointment_confirm'}><button className='button_t1 down_five'>Next</button></Link>
 
     </div>
 </div>)

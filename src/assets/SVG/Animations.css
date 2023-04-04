@@ -140,3 +140,19 @@
 
     }
   }
+  @keyframes check_mark {
+    from{
+      stroke-dashoffset: 75;
+    }
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes uncheck {
+    from{
+      stroke-dashoffset: 0;
+    }
+    to{
+      stroke-dashoffset: 75;
+    }
+  }

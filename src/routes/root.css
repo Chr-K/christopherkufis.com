@@ -8,6 +8,11 @@
     grid-template-rows: 10vh;
     align-items: center;
   }
+  .text_t1{
+    font-size:1.5rem;
+    color:white;
+    text-align: center;
+  }
   .page_title{
     font-size:2.5rem;
     font-weight:bold;
@@ -20,6 +25,18 @@
   }
   .down_five{
     margin-top:5vh;
+  }
+  .down_10{
+    margin-top:10vh;
+
+  }
+  .down_15{
+    margin-top:15vh;
+
+  }
+  .down_20{
+    margin-top:20vh;
+
   }
   .page_container{
     overflow: hidden;
@@ -92,7 +109,6 @@
   width:100vw;
   display:flex;
   justify-content: center;
-
 }
 
   .button_t1{
@@ -105,7 +121,9 @@
     font-size:1.5rem;
     width:65vw;
     height:10vh;
-    margin-top:2vh;
+    border-radius: 2rem;
+
+
 }
 .button_t2{
   display:inline-block;
@@ -145,10 +163,51 @@
   font-size:1.5rem;
   color:white;
 }
+.button_t5{
+  width:50vw;
+  height:9vh;
+  border:none;
+  display:inline-block;
+  border-radius: 2rem;
+  background-color: limegreen;
+  font-size:1.5rem;
+  color:white;
+}
 
 .space_left{
 margin-left:3vw;
 }
 .space_right{
 margin-right:3vw;
+}
+.table_t1{
+border:1px solid white;
+padding:4vw;
+}
+.check_box{
+  width:5vh;
+  height:5vh;
+  background-color: white;
+  border:none;
+  position: absolute;
+}
+.stack{
+  flex-direction: column;
+}
+
+.table_t2  td{
+  padding-right:5vw;
+  padding-top:3vh;
+  width:10vw;
+
+}
+.display_none{
+  display:none;
+}
+.close_button{
+  font-size:3rem;
+  color:gray;
+  right:5vw;
+  top:1vh;
+  position:absolute;
 }

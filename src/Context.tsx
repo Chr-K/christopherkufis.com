@@ -1,7 +1,9 @@
 import { SetStateAction,Dispatch, createContext, useState,ReactNode } from "react"
 
 export type User = {
-    logged_in:boolean
+    logged_in:boolean,
+    email:string,
+    phone?:number,
 }
 
 export interface UserContextInterface{

@@ -8,9 +8,9 @@ export default function Home(){
         <video id='vid' src={video} controls></video>
         </div>
     <div className='home_nav_buttons_container'>
-        <Link to={'/Projects'}><button className='button_t1'>Projects</button></Link>
-        <Link to={'/Appointments'}><button className='button_t1'>Appointments</button></Link>
-        <Link to={'/Login'}><button className='button_t1'>Login / Register</button></Link>
+        <Link to={'/Projects'}><button className='button_t1 down_five'>Projects</button></Link>
+        <Link to={'/Appointments'}><button className='button_t1 down_five'>Appointments</button></Link>
+        <Link to={'/Login'}><button className='button_t1 down_five'>Login / Register</button></Link>
         
     </div>
     </div>
