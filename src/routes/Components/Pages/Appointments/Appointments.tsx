@@ -1,17 +1,16 @@
 import './appointments.css'
 import { UserContext } from '../../../../Context'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 export default function Appointments(){
-const user = useContext(UserContext)
+const {user,setUser} = useContext(UserContext)
 let request_link:string
-if(user.user.logged_in==false){
+if(user.logged_in==false){
 request_link = '/login'
 }
 else{
     request_link = '/appointments/request_appointment'
 }
-
 
     return(
     <div className='appointment_container'>

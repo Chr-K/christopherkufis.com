@@ -173,7 +173,15 @@
   font-size:1.5rem;
   color:white;
 }
-
+.button_t6{
+  background-color: white;
+  border:none;
+  font-size: 1.5rem;
+  width:50vw;
+  height:8vh;
+  display:inline-block;
+  
+}
 .space_left{
 margin-left:3vw;
 }
@@ -210,4 +218,12 @@ padding:4vw;
   right:5vw;
   top:1vh;
   position:absolute;
+}
+
+.selected{
+  color:green;
+  
+}
+.unselected{
+  opacity: 50%;
 }

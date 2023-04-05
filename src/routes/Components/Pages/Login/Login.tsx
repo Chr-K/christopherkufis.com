@@ -1,9 +1,21 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './Login.css'
-
+import { UserContext } from '../../../../Context'
 export default function Login(){
+    const {user,setUser} = useContext(UserContext)
     const [Client_time,setClienttime] = useState(new Date())
     var time_greeting:string
+
+
+    useEffect(()=>{
+        if(user.logged_in===true){
+            document.getElementById('simulate_button')!.style.backgroundColor = 'green'
+        }
+        else{
+            document.getElementById('simulate_button')!.style.backgroundColor = 'white'
+
+        }
+    },[user])
     
     if(Client_time.getHours()<12 && Client_time.getHours()>=5){
         time_greeting = 'Morning'
@@ -14,6 +26,20 @@ export default function Login(){
     }
     else if (Client_time.getHours()>=18 || Client_time.getHours()<=4){
         time_greeting = 'Evening'
+    }
+    function simulate_logged_in(){
+        if(user.logged_in===true)
+        {
+            setUser({...user,
+                logged_in:false,
+                })
+        }
+        else{
+            setUser({...user,
+                logged_in:true,
+                })
+        }
+
     }
 
     return(
@@ -39,7 +65,9 @@ export default function Login(){
             <button id='login_submit' className='button_t3'>Login</button>
             </div>
         </div>
-
+        <div className='simulation_option'>
+        <button id='simulate_button' onClick={()=>{simulate_logged_in()}} className='button_t6 down_five'>Simulate Logged In</button>
+        </div>
     </div>
     )
         function select_register(){

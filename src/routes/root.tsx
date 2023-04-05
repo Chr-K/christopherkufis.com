@@ -8,6 +8,9 @@ import User_Provider from '../Context'
 function Root() {
   
   const [Drop_down_toggle,setDrop_down_toggle] = useState<boolean>(false)
+
+
+
   return (
     <User_Provider>
         <div className="app">
@@ -23,7 +26,7 @@ function Root() {
         <Link to={'/Login'} onClick={()=>{close_drop_down()}}><Profile_icon></Profile_icon></Link>
         </div>
 
-      <div id='drop_down_menu' className='drop_down_menu'>
+      <div id='drop_down_menu' className='drop_down_menu text_t1'>
       </div>
       </div>
       <div className='page_container'>

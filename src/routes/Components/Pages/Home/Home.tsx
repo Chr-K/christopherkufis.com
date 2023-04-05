@@ -1,6 +1,7 @@
 import './Home.css'
 import { Link } from 'react-router-dom'
 import video from '/sample.mp4'
+
 export default function Home(){
     return(
     <div className="home_container">

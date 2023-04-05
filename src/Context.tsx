@@ -16,7 +16,9 @@ const defaultState = {
         logged_in:false,
         
     },
-    setUser: (user:User) =>{}
+    setUser:(user:User) =>{
+
+    }
 } as UserContextInterface
 
 
