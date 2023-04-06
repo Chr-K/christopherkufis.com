@@ -41,4 +41,7 @@ justify-content: center;
 .phone_input{
     margin-top:10vh
 }
-
+.confirm_appointment_button_container{
+position:absolute;
+margin-top:15vh;
+}

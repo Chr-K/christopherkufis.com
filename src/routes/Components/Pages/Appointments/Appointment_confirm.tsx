@@ -81,6 +81,8 @@ export default function Appointment_confirm(){
             Confirm Appointment
         </div>
         <div className="appointment_table_container down_five">
+
+            <tbody>
         <table className="text_t1 table_t1">
             <tr>
                 <td>
@@ -97,8 +99,8 @@ export default function Appointment_confirm(){
                     Type:Interview
                 </td>
             </tr>
-        </table>
-
+        </table>                
+            </tbody>
         </div>
         <div className="text_t1 down_five">Would you like to be sent a reminder?</div>
         <div className="down_five button_container">
@@ -106,7 +108,8 @@ export default function Appointment_confirm(){
             <button onClick={()=>{Toggle_reminder('NO')}} id="appointment_notification_no" className="button_t4 space_left">No</button>
         </div>
         <div className="appointment_table_container">
-        <table id="notification_checkbox_container" className="text_t1 table_t2 display_none">
+            <tbody>
+                <table id="notification_checkbox_container" className="text_t1 table_t2 display_none">
             <tr className="check_box_text">
                 <td>
                     Email
@@ -129,13 +132,11 @@ export default function Appointment_confirm(){
                 <input id="text_box" type={'checkbox'}></input>
                 </td>
             </tr>
-            <tr>
-                <td>
-                <button className="button_t5 down_five"> Confirm Appointment</button>
-                </td>
-            </tr>
-        </table>
-            <div>
+
+        </table>        
+            </tbody>
+            <div className="confirm_appointment_button_container"> 
+                               <button className="button_t5 down_five"> Confirm Appointment</button>
             </div>
         </div>
     </div>)

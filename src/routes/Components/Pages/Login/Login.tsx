@@ -5,8 +5,7 @@ export default function Login(){
     const {user,setUser} = useContext(UserContext)
     const [Client_time,setClienttime] = useState(new Date())
     var time_greeting:string
-
-
+    
     useEffect(()=>{
         if(user.logged_in===true){
             document.getElementById('simulate_button')!.style.backgroundColor = 'green'
