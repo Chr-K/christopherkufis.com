@@ -156,3 +156,15 @@
       stroke-dashoffset: 75;
     }
   }
+
+  @keyframes gradient_background {
+    0%{background-position:0% 73%}
+    50%{background-position:100% 28%}
+    100%{background-position:0% 73%}
+  }
+
+  .default_animation{
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  

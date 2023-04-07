@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Root from './routes/root'
 import ErrorPage from './error_page'
-import { Home, Projects,Appointments,Request_appointment,Login,Appointment_confirm} from './routes/Components/Pages/Pages_barrel'
+import { Home, Projects,Appointments,Request_appointment,Login,Appointment_confirm, Check_existing} from './routes/Components/Pages/Pages_barrel'
 import './index.css'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 
@@ -34,6 +34,10 @@ const router = createBrowserRouter([{
   {
     path:'/appointments/appointment_confirm',
     element:<Appointment_confirm></Appointment_confirm>
+  },
+  {
+    path:'/appointments/check_existing',
+    element:<Check_existing></Check_existing>
   }
 ]
 }

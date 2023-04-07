@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from 'react'
-import './Login.css'
 import { UserContext } from '../../../../Context'
 export default function Login(){
     const {user,setUser} = useContext(UserContext)
@@ -26,46 +25,33 @@ export default function Login(){
     else if (Client_time.getHours()>=18 || Client_time.getHours()<=4){
         time_greeting = 'Evening'
     }
-    function simulate_logged_in(){
-        if(user.logged_in===true)
-        {
-            setUser({...user,
-                logged_in:false,
-                })
-        }
-        else{
-            setUser({...user,
-                logged_in:true,
-                })
-        }
 
-    }
 
     return(
     <div>
-        <div className='login_panel'>
-        <div className='login_title_container'>
-        <div className='login_title'>
+        <div className='card_container down_10 blue_text'>
+        <div className='card_title_container'>
+        <div className='card_title blue'>
         Good {time_greeting!}!
         </div>  
         </div>
-        <div className='selection_menu_button_container'>
-            <button id='login_button' className='button_selected' onClick={()=>{select_login()}}>Login</button>
-            <button id='register_button' onClick={()=>{select_register()}}>SignUp</button>
+        <div className='card_selector_container'>
+            <button id='login_button' className='selected_t1 card_selector text_t2' onClick={()=>{select_login()}}>Login</button>
+            <button id='register_button' className='card_selector text_t2' onClick={()=>{select_register()}}>SignUp</button>
         </div>
-        <div className='login_input_container'>
+        <div className='card_input_container'>
         <input id='email_input' placeholder='Email' onClick={()=>{
         }}></input>
         <input id='password_input' placeholder='Password' onChange={()=>{apply_password('password_input')}}></input>
-        <input id='confirm_password' placeholder='Confirm Password' onChange={()=>{apply_password('confirm_password')}}></input>
+        <input id='confirm_password' className='visibility_none default_animation' placeholder='Confirm Password' onChange={()=>{apply_password('confirm_password')}}></input>
         </div>
             <div className='login_button_container'>
-            <button className='button_transparent'>Forgot Password?</button>
-            <button id='login_submit' className='button_t3'>Login</button>
+            <button className='button_no_background text_t1'>Forgot Password?</button>
+            <button id='login_submit' className='button_t2 text_t2 float_right white blue_background'>Login</button>
             </div>
         </div>
-        <div className='simulation_option'>
-        <button id='simulate_button' onClick={()=>{simulate_logged_in()}} className='button_t6 down_five'>Simulate Logged In</button>
+        <div className='flex_center'>
+        <button id='simulate_button' onClick={()=>{simulate_logged_in()}} className='button_t2  down_5'>Simulate Logged In</button>
         </div>
     </div>
     )
@@ -75,10 +61,10 @@ export default function Login(){
             const confirm_password = document.getElementById('confirm_password')
             const login_submit_button = document.getElementById('login_submit')
 
-            login_button?.classList.remove('button_selected')
-            register_button?.classList.add('button_selected')
+            login_button?.classList.remove('selected_t1')
+            register_button?.classList.add('selected_t1')
             if(confirm_password!.style.animationName != 'fade_in'){
-                confirm_password!.style.display = 'block'
+                confirm_password!.style.visibility = 'visible'
             confirm_password!.style.animationName = 'fade_in'
             }
             if(login_submit_button?.innerText!= 'Register'){
@@ -91,13 +77,13 @@ export default function Login(){
             const confirm_password = document.getElementById('confirm_password')
             const login_submit_button = document.getElementById('login_submit')
 
-            register_button?.classList.remove('button_selected')
-            login_button?.classList.add('button_selected')
+            register_button?.classList.remove('selected_t1')
+            login_button?.classList.add('selected_t1')
             if(confirm_password!.style.animationName != 'fade_out'){
                 confirm_password!.style.animationName = 'fade_out'
                 const timeout = setTimeout(() => {
                     if(confirm_password!.style.animationName == 'fade_out'){
-                            confirm_password!.style.display = 'none'
+                            confirm_password!.style.visibility = 'hidden'
                     }
                     clearTimeout(timeout)
                 }, 1000);
@@ -111,5 +97,20 @@ export default function Login(){
             if(password_input!.value != ''){
                 password_input.type = 'password'
             }
+        }
+        function simulate_logged_in(){
+            if(user.logged_in===true)
+            {
+                setUser({...user,
+                    logged_in:false,
+                    })
+            }
+            else{
+                setUser({...user,
+                    logged_in:true,
+                    })
+                    history.back()
+            }
+    
         }
 }

@@ -4,7 +4,6 @@ import { apply_animation } from '../../../functions/Animations'
 export type options = {
     option:Array<string>
 }
-
     interface props{
         options:options,
         place_holder:string,

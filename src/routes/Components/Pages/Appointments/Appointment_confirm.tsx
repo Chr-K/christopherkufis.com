@@ -1,6 +1,9 @@
+import { useLocation } from "react-router"
 import Check_box from "../../../../assets/SVG/checkmark"
 export default function Appointment_confirm(){
-
+    const location = useLocation()
+    const appointment = location.state.appointment
+    console.log(appointment)
     function Toggle_reminder(value:string){
         const appointment_notification_yes = document.getElementById('appointment_notification_yes')
         const appointment_notification_no = document.getElementById('appointment_notification_no')
@@ -18,17 +21,15 @@ export default function Appointment_confirm(){
             appointment_notification_no!.style.backgroundColor = 'gray'
             appointment_notification_yes!.style.opacity = '100%'
             appointment_notification_no!.style.opacity = '50%'
-            checkbox_cont!.style.display = 'block'
-
+            checkbox_cont!.style.visibility = 'visible'
         }
         else if(value = 'NO')
         {   
-
             appointment_notification_yes!.style.backgroundColor = 'gray'
             appointment_notification_no!.style.backgroundColor = 'Orange'
             appointment_notification_yes!.style.opacity = '50%'
             appointment_notification_no!.style.opacity = '100%'
-            checkbox_cont!.style.display = 'none'
+            checkbox_cont!.style.visibility = 'hidden'
             check_1.style.strokeDashoffset = '75'
             check_2.style.strokeDashoffset = '75'
             check_3.style.strokeDashoffset = '75'
@@ -54,89 +55,92 @@ export default function Appointment_confirm(){
             box.checked = false
         }
         else{
-            console.log('hi')
             check_1!.style.animationDirection = 'normal'
             check_2!.style.animationDirection = 'normal'   
             check_1!.style.animationName = 'check_mark'
             check_2!.style.animationName = 'check_mark'
             box.checked = true
-
         }
     }
     return(
     <div>
-        <div id="add_phone" className="add_phone">
+        <div id="add_phone" className="pop_up">
             <div className="close_button">
             <span onClick={()=>{
                 document.getElementById('add_phone')!.style.display = 'none'
             }}>x</span>
             </div>
-        <div className="page_title phone_title">Add a phone  number</div>
-        <input className="phone_input" placeholder="Phone"></input>
-        <div className="button_container down_15">
-            <button className="button_t5">Confirm</button>
+        <div className=" page_title">Add a phone  number</div>
+        <div className="flex_center card_input_container">
+        <input className="down_5" placeholder="Phone"></input>
+
+        </div>
+        <div className="flex_center down_10">
+            <button className="button_t2 white black_background">Confirm</button>
         </div>
         </div>
-        <div className="page_title down_five">
+        <div className="white page_title">
             Confirm Appointment
         </div>
-        <div className="appointment_table_container down_five">
+        <div className="flex_center down_5 w_100">
 
+        <table className="table_t1">
             <tbody>
-        <table className="text_t1 table_t1">
             <tr>
-                <td>
-                    Date:6/18/26
+                <td className="text_t2 white">Date: </td>
+                <td className="text_t2 white">
+                   {appointment.month +' '+appointment.day + ', ' + appointment.year}
                 </td>
             </tr>
             <tr>
-                <td>
-                    Time:5:30pm
+                <td className="text_t2 white">Time: </td>
+                <td className="text_t2 white">
+                    {appointment.time + ' ' + appointment.ampm}
                 </td>
             </tr>
             <tr>
-                <td>
-                    Type:Interview
+                <td className="text_t2 white">Type: </td>
+                <td className="text_t2 white">
+                    {appointment.type}
                 </td>
             </tr>
-        </table>                
             </tbody>
+        </table>                
         </div>
-        <div className="text_t1 down_five">Would you like to be sent a reminder?</div>
-        <div className="down_five button_container">
-            <button onClick={()=>{Toggle_reminder('YES')}} id="appointment_notification_yes" className="button_t4 space_right">Yes</button>
-            <button onClick={()=>{Toggle_reminder('NO')}} id="appointment_notification_no" className="button_t4 space_left">No</button>
+        <div className="text_t2 down_5 white text_center">Confirmation notifications?</div>
+        <div className="down_five button_container flex_center down_5">
+            <button onClick={()=>{Toggle_reminder('YES')}} id="appointment_notification_yes" className="text_t2 right_5 button_t4 white opacity_50 space_right">Yes</button>
+            <button onClick={()=>{Toggle_reminder('NO')}} id="appointment_notification_no" className="text_t2 left_5 button_t4 white opacity_50 space_left">No</button>
         </div>
-        <div className="appointment_table_container">
-            <tbody>
-                <table id="notification_checkbox_container" className="text_t1 table_t2 display_none">
-            <tr className="check_box_text">
-                <td>
+        <div className="down_10">
+                <table id="notification_checkbox_container" className="table_t2 display_none visibility_none">
+                <tbody className="flex_center">
+            <tr className="check_box_text right_10">
+                <td className="text_t2 white right_5">
                     Email
                 </td>
                 <td>
                     <span  onClick={()=>{tickbox('email_box')}} id="email_box_span" className="check_box">
                         <Check_box id={'email_box_mark'}></Check_box>
                     </span>
-                    <input id="email_box" type={'checkbox'}></input>
+                    <input className="check_box_input" id="email_box" type={'checkbox'}></input>
                 </td>
             </tr>
-            <tr className="check_box_text">
-                <td>
+            <tr className="check_box_text ">
+                <td className="text_t2 right_5 white">
                     Text
                 </td>
                 <td>
                 <span onClick={()=>{tickbox('text_box')}} id="text_box_span" className="check_box">
                 <Check_box id={'text_box_mark'}></Check_box>
                 </span>
-                <input id="text_box" type={'checkbox'}></input>
+                <input className="check_box_input" id="text_box" type={'checkbox'}></input>
                 </td>
             </tr>
-
-        </table>        
             </tbody>
-            <div className="confirm_appointment_button_container"> 
-                               <button className="button_t5 down_five"> Confirm Appointment</button>
+        </table>        
+            <div className="down_10 flex_center"> 
+                               <button className="button_t1 black_background white down_five add_5_bottom">Confirm Appointment</button>
             </div>
         </div>
     </div>)

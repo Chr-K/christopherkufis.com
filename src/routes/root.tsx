@@ -1,5 +1,7 @@
 import './root.css'
-import '../assets/SVG/Animations.css'
+import './Styles/buttons.css'
+import './Styles/color.css'
+import './Styles/Animations.css'
 import {Drop_down,Profile_icon} from '../assets/SVG/SVG_bucket'
 import { Link,Outlet } from 'react-router-dom'
 import { apply_animation } from '../functions/Animations'
@@ -14,15 +16,14 @@ function Root() {
   return (
     <User_Provider>
         <div className="app">
-      <div className="header">
-        <div></div>
-        <div className='drop_down_container' onClick={()=>{
+      <div className="header_container">
+        <div className='svg_container down_2_half' onClick={()=>{
           drop_down()
         }}>
       <Drop_down></Drop_down>
         </div>
       <Link to={'/'}><span className='header_title' onClick={()=>{close_drop_down()}}>Christopher Kufis</span></Link>
-        <div className='profile_icon_container'>
+        <div className='svg_container grid_end '>
         <Link to={'/Login'} onClick={()=>{close_drop_down()}}><Profile_icon></Profile_icon></Link>
         </div>
 
