@@ -141,7 +141,12 @@ return(
     <button onClick={()=>{ampm_switch('AM')}} id='am_button' className='button_t3 right_5 opacity_50 white'>AM</button>
     <button onClick={()=>{ampm_switch('PM')}}  id='pm_button'className='button_t3 left_5 opacity_50 white'>PM</button>
     </div>
-    <Link className='flex_center' state={{appointment:appointment_request_obj!}} to={'/appointments/appointment_confirm'}><button className='button_t1 down_5 white black_background'>Next</button></Link>
+    <Link onClick={()=>{
+        if(Object.values(appointment_request_obj).some(x=>(x !== null)) === false){
+        }
+        else{
+        }
+    }} className='flex_center' state={{appointment:appointment_request_obj!}} to={'/appointments/appointment_confirm'}><button className='button_t1 down_5 white black_background'>Next</button></Link>
     </div>
 </div>)
 }   

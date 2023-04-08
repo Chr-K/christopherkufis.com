@@ -7,11 +7,10 @@ import { Link,Outlet } from 'react-router-dom'
 import { apply_animation } from '../functions/Animations'
 import { useState } from 'react'
 import User_Provider from '../Context'
+import Simulate_logged_in from './Components/Simulate_logged_in'
 function Root() {
   
   const [Drop_down_toggle,setDrop_down_toggle] = useState<boolean>(false)
-
-
 
   return (
     <User_Provider>
@@ -28,6 +27,7 @@ function Root() {
         </div>
 
       <div id='drop_down_menu' className='drop_down_menu text_t1'>
+        <Simulate_logged_in></Simulate_logged_in>
       </div>
       </div>
       <div className='page_container'>

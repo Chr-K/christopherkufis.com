@@ -88,19 +88,19 @@ export default function Appointment_confirm(){
             <tbody>
             <tr>
                 <td className="text_t2 white">Date: </td>
-                <td className="text_t2 white">
+                <td className="text_t2 yellow">
                    {appointment.month +' '+appointment.day + ', ' + appointment.year}
                 </td>
             </tr>
             <tr>
                 <td className="text_t2 white">Time: </td>
-                <td className="text_t2 white">
+                <td className="text_t2 yellow">
                     {appointment.time + ' ' + appointment.ampm}
                 </td>
             </tr>
             <tr>
                 <td className="text_t2 white">Type: </td>
-                <td className="text_t2 white">
+                <td className="text_t2 yellow">
                     {appointment.type}
                 </td>
             </tr>

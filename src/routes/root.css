@@ -157,10 +157,7 @@ input:focus{
   text-align: center;
   border:solid 2px white;
   border-radius: 2rem;
-  background: linear-gradient(312deg, #1e4ca8, #0ed5ea);
-  background-size: 400% 400%;
-  animation: gradient_background 7s ease infinite;
-
+  background-color: black;
 }
 .table_t2{
   width:100vw;

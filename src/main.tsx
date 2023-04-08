@@ -6,6 +6,7 @@ import { Home, Projects,Appointments,Request_appointment,Login,Appointment_confi
 import './index.css'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 
+
 const router = createBrowserRouter([{
   path:"/",
   element:<Root/>,

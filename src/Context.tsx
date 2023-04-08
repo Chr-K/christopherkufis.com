@@ -14,7 +14,7 @@ export interface UserContextInterface{
 const defaultState = {
     user: {
         logged_in:false,
-        
+
     },
     setUser:(user:User) =>{
 

@@ -1,19 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
-import { UserContext } from '../../../../Context'
 export default function Login(){
-    const {user,setUser} = useContext(UserContext)
     const [Client_time,setClienttime] = useState(new Date())
     var time_greeting:string
-    
-    useEffect(()=>{
-        if(user.logged_in===true){
-            document.getElementById('simulate_button')!.style.backgroundColor = 'green'
-        }
-        else{
-            document.getElementById('simulate_button')!.style.backgroundColor = 'white'
-
-        }
-    },[user])
     
     if(Client_time.getHours()<12 && Client_time.getHours()>=5){
         time_greeting = 'Morning'
@@ -25,7 +13,6 @@ export default function Login(){
     else if (Client_time.getHours()>=18 || Client_time.getHours()<=4){
         time_greeting = 'Evening'
     }
-
 
     return(
     <div>
@@ -46,13 +33,11 @@ export default function Login(){
         <input id='confirm_password' className='visibility_none default_animation' placeholder='Confirm Password' onChange={()=>{apply_password('confirm_password')}}></input>
         </div>
             <div className='login_button_container'>
-            <button className='button_no_background text_t1'>Forgot Password?</button>
+            <button className='button_no_background text_t1 down_2_half right_5'>Forgot Password?</button>
             <button id='login_submit' className='button_t2 text_t2 float_right white blue_background'>Login</button>
             </div>
         </div>
-        <div className='flex_center'>
-        <button id='simulate_button' onClick={()=>{simulate_logged_in()}} className='button_t2  down_5'>Simulate Logged In</button>
-        </div>
+
     </div>
     )
         function select_register(){
@@ -98,19 +83,5 @@ export default function Login(){
                 password_input.type = 'password'
             }
         }
-        function simulate_logged_in(){
-            if(user.logged_in===true)
-            {
-                setUser({...user,
-                    logged_in:false,
-                    })
-            }
-            else{
-                setUser({...user,
-                    logged_in:true,
-                    })
-                    history.back()
-            }
-    
-        }
+
 }
