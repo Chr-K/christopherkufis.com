@@ -2,7 +2,7 @@ import time
 import subprocess
 p1 = subprocess.Popen("git rev-parse main",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE)
 hash = p1.communicate()[0]
-def p2(): subprocess.Popen("git achdd --all; git commit -m 'backend testing -auto';git push",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE).communicate()
+def p2(): subprocess.Popen("git add --all; git commit -m 'backend testing -auto';git push",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE).communicate()
 p2()
 p3 = subprocess.Popen("ssh root@christopherkufis.com",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE)
 print(subprocess.Popen("git rev-parse origin/main",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE).communicate()[0])
