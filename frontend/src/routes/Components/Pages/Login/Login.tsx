@@ -89,6 +89,9 @@ export default function Login(){
             formData.append('password','basic123')
             fetch('/users/login',{
                 method: 'POST',
+                headers:{
+                    'Content-Type' : 'application/x-www-form-urlencoded'
+                },
                 body: formData
             })
             .then(response => response.json())
