@@ -1,0 +1,7 @@
+export {default as Home} from './Home/Home'
+export {default as Projects} from './Projects/Projects'
+export {default as Appointments} from './Appointments/Appointments'
+export {default as Login} from './Login/Login'
+export {default as Request_appointment} from './Appointments/Request_appointment'
+export {default as Appointment_confirm} from './Appointments/Appointment_confirm'
+export {default as Check_existing} from './Appointments/check_existing'

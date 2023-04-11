@@ -1,0 +1,47 @@
+button{
+    border-radius: 2rem;
+    border:none;
+    }
+
+.button_container_center_single_stack > a > button{
+    margin-left:auto;
+    margin-right:auto;
+    }
+.button_container_center_single_stack{
+  margin-left:auto;
+  margin-right:auto;
+}
+.button_no_background{
+background-color: transparent;
+color:rgba(0, 0, 0, 0.50);
+}
+
+.button_t1{
+      font-size: 1.5rem;
+      height:10vh;
+      width:65vw;
+      display:block;
+      border:none;
+}
+.button_t2{
+width:35vw;
+height:6vh;
+}
+
+.button_t3{
+  width:25vw;
+  height:5vh;
+}
+.button_t4{
+  height:6vh;
+  width:25vw;
+}
+
+
+.selected_t1{
+  color:orange;
+  text-decoration: underline;
+  text-underline-offset: 1vh;
+  height:5vh;
+}
+

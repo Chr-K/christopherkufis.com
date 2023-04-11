@@ -1,0 +1,12 @@
+.dropper{
+fill:white;
+animation-fill-mode: forwards;
+animation-duration: 500ms;
+transform-origin: 50% 50%;
+transform-box:fill-box;
+}
+
+
+svg {
+    overflow:visible;
+}

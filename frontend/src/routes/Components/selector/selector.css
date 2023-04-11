@@ -1,0 +1,47 @@
+.selector{
+    height:6vh;
+    width:60vw;
+    background-color: white;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5vh;
+    text-align: center;
+    line-height: 6vh;
+    font-size: 1.5rem;
+    border-bottom:solid 1px black;
+}
+.selector_options{
+    height:35vh;
+    width:60vw;
+    background-color: white;
+    margin-left:auto;
+    margin-right:auto;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+    display: none;
+    overflow: scroll;
+}
+.selector_option{
+    display: block;
+    height:7vh;
+    background-color: white;
+    width:60vw;
+    border:none;
+    border-radius: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+}
+.selector_options_container{
+    z-index: 2;
+
+    width:60vw;
+    left:20vw;
+    overflow:hidden;
+    position:absolute;
+}
+
+#appointment_day_value{
+    opacity:50%;
+
+}

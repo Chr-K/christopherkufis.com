@@ -1,0 +1,170 @@
+@keyframes top_line_forward {
+    from{
+        transform:translateY(0) rotate(0deg);
+    }
+    to{
+        transform:translateY(15px) rotate(45deg);
+    }
+  }
+  @keyframes bottom_line_forward {
+    from{
+        transform:translateY(0) rotate(0deg);
+
+    }
+    to{
+        transform:translateY(-15px) rotate(-45deg);
+    }
+  }
+@keyframes top_line_backward {
+    from{
+        transform:translateY(15px) rotate(45deg);
+    }
+    to{
+        transform:translateY(0) rotate(0deg);
+    }
+  }
+  @keyframes bottom_line_backward {
+    from{
+        transform:translateY(-15px) rotate(-45deg);
+    }
+    to{
+        transform:translateY(0) rotate(0);
+    }
+    
+  }
+
+  @keyframes menu_slide_in {
+    from{
+        right:100vw;
+    }
+    to{
+        right:0;
+    }
+  }
+  @keyframes menu_slide_out {
+    from{
+        right:0;
+    }
+    to{
+        right:100vw;
+    }
+  }
+  @keyframes fade_in{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:100%;
+    }
+  }
+  @keyframes fade_out{
+    from{
+        opacity:100%;
+    }
+    to{
+        opacity:0;
+    }
+  }
+
+  @keyframes type_writer {
+    from{
+        width:0;
+    }
+    to{
+        width:55vw;
+    }
+  }
+  @keyframes blink_cursor{
+
+    from,to{border-color: transparent}
+
+    50%{border-color: black;}
+  }
+  @keyframes login_selector_slide {
+    from{
+        left:-30vw;
+        transform:rotate(-180deg);
+
+    }
+    to{
+        left:20vw;
+        transform:rotate(0deg);
+
+    }
+  }
+  @keyframes register_selector_slide {
+    from{
+        right:-30vw;
+        transform:rotate(180deg);
+    }
+    to{
+        transform:rotate(0deg);
+        right:20vw;
+    }
+  }
+  @keyframes login_buttons_slide_up   
+  {
+    from{
+        margin-top:10vh;
+    }
+    to{
+        margin-top:-2vh;
+    }
+  }
+  @keyframes login_panel_slide_in {
+    from{
+        margin-top:-100vh;
+    }
+    to{
+        margin-top:10vh;
+    }
+  }
+  @keyframes selector_slide_in {
+    from{
+      margin-top:-45vh;
+    }
+    to{
+      margin-top:0;
+      opacity: 100%;
+    }
+  }
+  @keyframes selector_slide_out {
+    from{
+      margin-top:0;
+      opacity: 100%;
+    }
+    to{
+      margin-top:-45vh;
+      opacity: 0;
+
+
+    }
+  }
+  @keyframes check_mark {
+    from{
+      stroke-dashoffset: 75;
+    }
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes uncheck {
+    from{
+      stroke-dashoffset: 0;
+    }
+    to{
+      stroke-dashoffset: 75;
+    }
+  }
+
+  @keyframes gradient_background {
+    0%{background-position:0% 73%}
+    50%{background-position:100% 28%}
+    100%{background-position:0% 73%}
+  }
+
+  .default_animation{
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
