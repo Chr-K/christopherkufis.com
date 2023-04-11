@@ -1,5 +1,5 @@
 <?php
-echo 'hellophpbros';
+echo json_encode('hellophpbros') ;
 
 /*
 require_once 'backend/app/router/router.php';
