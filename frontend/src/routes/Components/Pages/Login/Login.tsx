@@ -91,9 +91,8 @@ export default function Login(){
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json())
-            .then(data=>{
-                console.log(data)
+            .then(response=>{
+                console.log(response)
             })
         }
 
