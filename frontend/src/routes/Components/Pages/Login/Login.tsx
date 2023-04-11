@@ -98,6 +98,9 @@ export default function Login(){
             .then(data=>{
                 console.log(data)
             })
+            .catch(error =>{
+                console.error('Error:',error)
+            })
         }
 
 }
