@@ -17,8 +17,11 @@ class userModel extends Model{
                 return($_SESSION["user_id"]);
             }
             else{
-                http_response_code(400);
+                return('user not found');
             }
+        }
+        else{
+            return('user not found');
         }
 
     }
