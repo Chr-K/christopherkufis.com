@@ -89,10 +89,7 @@ export default function Login(){
             formData.append('password','basic123')
         await  fetch('/api/index.php',{
                 method: 'POST',
-                headers:{
-                    'Content-Type': 'application/json',
-                },
-                body: formData
+                body: formData,
             })
             .then(response => response.json())
             .then(data=>{
