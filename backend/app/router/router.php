@@ -17,6 +17,7 @@ class Router{
                 $controllerName = $route['handler']['controller'];
                 $actionName = $route['handler']['action'];
                 $controller = new $controllerName();
+                echo json_encode('matches');
                 return $controller->$actionName(...$matches);
             }
         }

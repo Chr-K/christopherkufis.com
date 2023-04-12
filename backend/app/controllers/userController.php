@@ -12,7 +12,7 @@ class userController extends Controller{
         $email = $_POST['email'];
         $password = $_POST['password'];
         $login = $this->usermodel->login($email,$password);
-        echo json_encode($login);
+        echo json_encode('asdsa');
     }
 
 }
