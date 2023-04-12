@@ -1,4 +1,5 @@
 <?php
+file_put_contents('/tmp/userController_loaded', 'File loaded successfully');
 require_once('/var/www/html/christopherkufis.com/backend/app/controllers/controller.php');
 class userController extends Controller{
     protected $usermodel;
