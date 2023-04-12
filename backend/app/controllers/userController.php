@@ -6,7 +6,6 @@ class userController extends Controller{
         parent::__construct();
         require_once('backend/app/models/userModel.php');
         $this->usermodel = new userModel();
-        echo json_encode('hi');
     }
 
     public function authenticate($email,$password){
