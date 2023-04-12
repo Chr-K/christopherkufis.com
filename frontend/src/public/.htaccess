@@ -5,5 +5,5 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !^/backend/public/index.php
-  RewriteRule ^ /index.html [L]
+  RewriteRule . /index.html [L]
 </IfModule>
