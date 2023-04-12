@@ -83,11 +83,11 @@ export default function Login(){
                 password_input.type = 'password'
             }
         }
-        function test_login(){
+        async function test_login(){
             const formData = new FormData()
             formData.append('email','ckufislogin@icloud.com')
             formData.append('password','basic123')
-            fetch('christopherkufis.com/api/index.php',{
+        await  fetch('christopherkufis.com/api/index.php',{
                 method: 'POST',
                 body: formData
             })
