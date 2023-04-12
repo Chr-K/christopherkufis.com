@@ -14,8 +14,8 @@ class Router{
         foreach($this->routes as $route){
             if($route['method'] === $method && preg_match('#^'.$route['path'] . '$#',$uri,$matches)){
                 array_shift($matches);
-                $controllerName = $route['controller'];
-                $actionName = $route['action'];
+                $controllerName = $route['handler']['controller'];
+                $actionName = $route['handler']['action'];
                 $controller = new $controllerName();
                 return $controller->$actionName(...$matches);
             }

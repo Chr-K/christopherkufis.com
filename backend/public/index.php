@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: Multipart/form-data");
+header("Content-Type: multipart/form-data");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 
@@ -8,8 +8,10 @@ require_once 'backend/app/userController.php';
 session_start();
 
 $router = new Router();
-$router->addRoute('POST','/users/login',['controller' => 'backend/app/controllers/userController.php',
+$router->addRoute('POST','/users/login',['controller' => 'backend/app/userController.php',
 'action' => 'authenticate'
 ]);
+
+$router->handleRequest();
 ?>
 
