@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: multipart/form-data");
+header("Content-Type: *");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 
