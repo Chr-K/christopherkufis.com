@@ -10,9 +10,7 @@ class userController extends Controller{
     }
 
     public function authenticate(){
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $login = $this->usermodel->login($email,$password);
+        $login = $this->usermodel->login($_POST['email'],$_POST['password']);
         echo json_encode($login);
     }
 
