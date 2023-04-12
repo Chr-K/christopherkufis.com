@@ -1,5 +1,4 @@
 import time
-import os
 import subprocess
 p1 = subprocess.Popen("git rev-parse main",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE)
 hash = p1.communicate()[0]
@@ -14,15 +13,13 @@ if subprocess.Popen("git rev-parse origin/main",shell=True,stdin=subprocess.PIPE
         print(x + 'comparing hashes')
         print(hash)
         print(subprocess.Popen("git rev-parse origin/main",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE).communicate()[0])
-        if subprocess.Popen("git rev-parse origin/main",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE).communicate()[0] == hash:
-            time.sleep(2)
-        elif subprocess.Popen("git rev-parse origin/main",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE).communicate()[0] != hash:
-            os.environ['PATH'] = '/usr/bin:/bin:' + os.environ['PATH']
-            print(p3.communicate('cd /var/www/html/christopherkufis.com; git pull; npm run build;'.encode("utf-8")))            
+    if subprocess.Popen("git rev-parse origin/main",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE).communicate()[0] == hash:
+           time.sleep(2)
+    elif subprocess.Popen("git rev-parse origin/main",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE).communicate()[0] != hash:
+         print(p3.communicate('cd /var/www/html/christopherkufis.com; git pull; npm run build;'.encode("utf-8")))            
 elif subprocess.Popen("git rev-parse origin/main",shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE).communicate()[0] != hash:
-        os.environ['PATH'] = '/usr/bin:/bin:' + os.environ['PATH']
-        print(p3.communicate('cd /var/www/html/christopherkufis.com; git pull; npm run build;'.encode("utf-8")))
+       print(p3.communicate('cd /var/www/html/christopherkufis.com; git pull; npm run build;'.encode("utf-8")))
     
 
 else:
-    print('error')
+   print('error')

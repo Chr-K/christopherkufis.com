@@ -84,7 +84,8 @@ export default function Login(){
             }
         }
         async function test_login(){
-            const formData = new FormData()
+            /*
+                        const formData = new FormData()
             formData.append('email','ckufislogin@icloud.com')
             formData.append('password','basic123')
         await  fetch('christopherkufis.com/api/index.php',{
@@ -101,6 +102,15 @@ export default function Login(){
             .catch(error =>{
                 console.error('Error:',error)
             })
+            */
+            await fetch('christopherkufis.com/api/index.php',{
+                method:'GET',
+                headers:{
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(res=>res.json())
+            .then(res=>console.log(res))
         }
 
 }
