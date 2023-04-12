@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 
 
-echo json_encode('hellobros') ;
+echo json_encode('hellophpbros') ;
 
 /*
 require_once 'backend/app/router/router.php';
