@@ -8,7 +8,7 @@ require_once '/var/www/html/christopherkufis.com/backend/app/controllers/userCon
 session_start();
 
 $router = new Router();
-$router->addRoute('POST','christopherkufis.com/users/login',['controller' => 'backend/app/userController.php',
+$router->addRoute('POST','https://christopherkufis.com/users/login',['controller' => 'backend/app/userController.php',
 'action' => 'authenticate'
 ]);
 $router->handleRequest();
