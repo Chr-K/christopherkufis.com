@@ -14,7 +14,7 @@ class userModel extends Model{
 
             if(password_verify($password,$real_password)){
                 $_SESSION["user_id"] = $id;
-                echo json_encode($_SESSION["user_id"]);
+                echo json_encode('beep');
             }
             else{
                 http_response_code(400);
