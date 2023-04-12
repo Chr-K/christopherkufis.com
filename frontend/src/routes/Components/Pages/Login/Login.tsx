@@ -87,7 +87,7 @@ export default function Login(){
             const formData = new FormData()
             formData.append('email','ckufislogin@icloud.com')
             formData.append('password','basic123')
-        await  fetch('/users/login',{
+        await  fetch('/backend/public/index.php/users/login',{
                 method: 'POST',
                 body: formData,
             })
