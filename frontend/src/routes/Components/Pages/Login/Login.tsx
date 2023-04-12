@@ -91,7 +91,10 @@ export default function Login(){
                 method: 'POST',
                 body: formData,
             })
-            .then(response => console.log(response.statusText))
+            .then(response => {
+                console.log(response.statusText)
+                console.log(response)
+            })
             .then(data=>{
                 console.log(data)
             })
