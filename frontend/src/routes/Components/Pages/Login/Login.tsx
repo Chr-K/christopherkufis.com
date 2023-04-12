@@ -103,7 +103,7 @@ export default function Login(){
                 console.error('Error:',error)
             })
             */
-            await fetch('christopherkufis.com/api/index.php',{
+            await fetch('/api/index.php',{
                 method:'GET',
                 headers:{
                     'Content-Type': 'application/json',
