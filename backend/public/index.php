@@ -8,7 +8,7 @@ require_once 'backend/app/userController.php';
 session_start();
 
 $router = new Router();
-$router->addRoute('POST','/users/login',['userController' => 'backend/app/controllers/userController.php',
+$router->addRoute('POST','/users/login',['controller' => 'backend/app/controllers/userController.php',
 'action' => 'authenticate'
 ]);
 ?>
