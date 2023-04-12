@@ -11,7 +11,7 @@ $router = new Router();
 $router->addRoute('POST','/users/login',['controller' => 'backend/app/userController.php',
 'action' => 'authenticate'
 ]);
-
+echo json_encode('hi');
 $router->handleRequest();
 ?>
 
