@@ -9,7 +9,7 @@ class userController extends Controller{
         $this->usermodel = new userModel();
     }
 
-    public function authenticate($email,$password){
+    public function authenticate(){
         $email = $_POST['email'];
         $password = $_POST['password'];
         $login = $this->usermodel->login($email,$password);
