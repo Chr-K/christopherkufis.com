@@ -25,7 +25,7 @@ class Router{
 
 
         http_response_code(404);
-        echo json_encode('404 Not Found');
+        echo json_encode('404 Not Found beep');
     }
 }
 
