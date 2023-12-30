@@ -1,0 +1,12 @@
+body{
+  margin:0;
+}
+.nav{
+  height:10vh;
+}
+.content{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2vh;
+}

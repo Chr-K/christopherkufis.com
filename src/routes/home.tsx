@@ -1,13 +1,14 @@
-
+import Card from '../components/Card'
 export default function Home(){
     return(
         <>
-        <header>
-            <h1>Hello World</h1>
-        </header>
-        <article>
-            <p>Welcome to my website!</p>
-        </article>
+        <Card title='test' subtitle='test'></Card>
+        <Card title='test' subtitle='test'></Card>
+        <Card title='test' subtitle='test'></Card>
+        <Card title='test' subtitle='test'></Card>
+        <Card title='test' subtitle='test'></Card>        
+        <Card title='test' subtitle='test'></Card>
+        <Card title='test' subtitle='test'></Card>
         </>
         )
 }

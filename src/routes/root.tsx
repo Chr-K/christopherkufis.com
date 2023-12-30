@@ -1,16 +1,15 @@
 import { Outlet } from "react-router-dom"
-import { Link } from "react-router-dom"
 export default function Root(){
 return(
-    <div className="primary">
-        <div className="top_nav secondary">
-            <div className="navbtn-container links">
-            <Link to={'/'}>Home</Link>
-            <Link to={'/about'}>About</Link>
-            </div>
-
+    <>
+    <div className="container">
+    <div className="nav">
+            <h1>Christopher Kufis</h1>
         </div>
+        <div className="content">
         <Outlet></Outlet>
+        </div>
     </div>
+    </>
 )
 }
