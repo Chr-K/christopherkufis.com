@@ -8,7 +8,6 @@ export default function Home(){
         <Card title='test' subtitle='test'></Card>
         <Card title='test' subtitle='test'></Card>        
         <Card title='test' subtitle='test'></Card>
-        <Card title='test' subtitle='test'></Card>
         </>
         )
 }
