@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import Card from '../components/Card'
-import { CardProps } from '../components/CardProps'
 export default function Home(){
     const [articles,setArticles] = useState([])
 
@@ -22,6 +20,7 @@ export default function Home(){
     },[])
     let content
     content = <div>nothing to see here</div>
+    console.log(articles)
     return(
         <>
         {content}
