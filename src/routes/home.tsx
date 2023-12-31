@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import Card from '../components/Card'
 import { CardProps } from '../components/CardProps'
-import LoadBar from '../components/LoadBar'
 export default function Home(){
     const [articles,setArticles] = useState([])
 
