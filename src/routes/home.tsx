@@ -3,11 +3,6 @@ export default function Home(){
     return(
         <>
         <Card title='test' subtitle='test'></Card>
-        <Card title='test' subtitle='test'></Card>
-        <Card title='test' subtitle='test'></Card>
-        <Card title='test' subtitle='test'></Card>
-        <Card title='test' subtitle='test'></Card>        
-        <Card title='test' subtitle='test'></Card>
         </>
         )
 }
