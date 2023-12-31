@@ -1,6 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Card from '../components/Card'
+import { CardProps } from '../components/CardProps'
 export default function Home(){
+    const [articles,setArticles] = useState([])
+
     useEffect(()=>{
         fetch('https://api.christopherkufis.com/articles',{
             method:"GET",
@@ -14,14 +17,21 @@ export default function Home(){
             return res.json()
         })
         .then((res)=>{
-            res.forEach((element: string) => {
-               console.log(element) 
-            });
+            setArticles(res)
         })
     },[])
+    let content
+    if(articles.length > 0){
+        content = articles.map((article:CardProps)=>{
+            <Card {...article}></Card>
+        })
+    }
+    else{
+        content = <div>Nothing to see here</div>
+    }
     return(
         <>
-        <Card title='test' subtitle='test'></Card>
+        {content}
         </>
         )
 }
