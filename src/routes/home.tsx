@@ -14,7 +14,9 @@ export default function Home(){
             return res.json()
         })
         .then((res)=>{
-            console.log(res)
+            res.forEach((element: string) => {
+               console.log(element) 
+            });
         })
     },[])
     return(
