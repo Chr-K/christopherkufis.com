@@ -29,7 +29,7 @@ export default function Home(){
        )
     }
     else{
-        content = <LoadBar></LoadBar>
+        content = <div></div>
     }
     return(
         <>
