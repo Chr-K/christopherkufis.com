@@ -21,14 +21,7 @@ export default function Home(){
         })
     },[])
     let content
-    if(articles.length > 0){
-        content = articles.map((article:CardProps)=>{
-            <Card {...article}></Card>
-        })
-    }
-    else{
-        content = <div>Nothing to see here</div>
-    }
+    content = <div>nothing to see here</div>
     return(
         <>
         {content}
