@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Card from '../components/Card'
 import { CardProps } from '../components/CardProps'
+import LoadBar from '../components/LoadBar'
 export default function Home(){
     const [articles,setArticles] = useState([])
 
@@ -28,7 +29,7 @@ export default function Home(){
        )
     }
     else{
-        content = <div>Nothing to see here</div>
+        content = <LoadBar></LoadBar>
     }
     return(
         <>

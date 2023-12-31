@@ -1,0 +1,21 @@
+.spin{
+    animation:rotate 2s linear infinite;
+    width:10rem;
+    height:10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+svg *{
+    transform-origin: center;
+
+}
+
+@keyframes rotate {
+    from {
+        transform:rotate(0);
+    }
+    to{
+        transform:rotate(360deg)
+    }
+}
