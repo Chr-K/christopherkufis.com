@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import '../styles/card.css'
 import { CardProps } from './CardProps'
 
