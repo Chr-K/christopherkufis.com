@@ -1,10 +1,13 @@
-import { Outlet } from "react-router-dom"
+import { Outlet , Link } from "react-router-dom"
 export default function Root(){
 return(
     <>
     <div className="container">
     <div className="nav">
-            <h1>Christopher Kufis</h1>
+            <span className="chris">Christopher Kufis</span>
+            <div className="nav-btn">
+                <Link to={"/"} >Home</Link>
+            </div>
         </div>
         <div className="content">
         <Outlet></Outlet>

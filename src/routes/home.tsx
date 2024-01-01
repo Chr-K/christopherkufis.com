@@ -28,7 +28,11 @@ export default function Home(){
        )
     }
     else{
-        content = <div></div>
+        
+        let empty:CardProps = 
+        {title:'Hello World',subtitle:'',content:'Welcome to my website',created:'',updated:''}
+
+        content = <Card {...empty}></Card>
     }
     return(
         <>

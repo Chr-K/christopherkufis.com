@@ -4,4 +4,21 @@
     width:80%;
     height:35vh;
     border-radius: 15px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-title{
+    margin-top:2rem;
+    font-size: xx-large;
+}
+.card-content{
+    font-size: larger;
+    height:35%;
+}
+.read-link{
+font-size:larger;
+text-decoration: underline;
+text-underline-offset: 4px;
+
 }
