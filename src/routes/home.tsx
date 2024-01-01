@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Card from '../components/Card'
-import { CardProps } from '../components/CardProps'
+import { CardProps } from '../components/Types/CardProps'
 export default function Home(){
     const [articles,setArticles] = useState([])
 
@@ -30,7 +30,7 @@ export default function Home(){
     else{
         
         let empty:CardProps = 
-        {title:'Hello World',subtitle:'',content:'Welcome to my website.',created:'',updated:''}
+        {title:'Hello World',subtitle:'',content:'Welcome to my website.',created:'',updated:'',id:0}
 
         content = <>
         <Card {...empty}></Card>

@@ -3,5 +3,6 @@ export interface CardProps{
     subtitle:string,
     content:string,
     created:string,
-    updated:string
+    updated:string,
+    id:number,
     }

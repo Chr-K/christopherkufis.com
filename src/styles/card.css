@@ -8,6 +8,9 @@
     justify-content: center;
     flex-direction: column;
 }
+.card:hover{
+    cursor: pointer;
+}
 .card-title{
     margin-top:2rem;
     font-size: xx-large;

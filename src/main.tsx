@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client';
 import Root from './routes/root';
 import Home from './routes/home';
 import About from './routes/about';
+import Article from './components/Article';
+
 
 import {
   createBrowserRouter,
@@ -21,7 +23,15 @@ const router = createBrowserRouter([
     {
       path:'about',
       element:<About></About>
-    },],
+    },
+    {
+      path:'/article/:articleID',
+      element:<Article></Article>,
+      loader:async (id)=>{
+        return await fetch(`https://api.christopherkufis.com/article/${id}`)
+      }
+    },
+  ],
   },
 ]);
 

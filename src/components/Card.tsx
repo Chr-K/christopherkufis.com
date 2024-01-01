@@ -1,13 +1,20 @@
 import '../styles/card.css'
-import { CardProps } from './CardProps'
+import { CardProps } from './Types/CardProps'
+import { useNavigate } from 'react-router-dom'
 
 export default function Card(card : CardProps){
+    const navigate = useNavigate()
+    function handleClick(){
+        navigate(`/article/${card.id}`)
+    }
+
     return(
-    <div className="card">
+    <div className="card" onClick={handleClick}>
         <p className='card-title'> {card.title} </p>
         <p className='card-content'> {card.content} </p>
         <p className='read-link'>Click To Read</p>
     </div>
+
     
     )
 }
