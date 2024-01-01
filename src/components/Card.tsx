@@ -12,6 +12,7 @@ export default function Card(card : CardProps){
     <div className="card" onClick={handleClick}>
         <p className='card-title'> {card.title} </p>
         <p className='card-content'> {card.content} </p>
+        <p>id{card.id}</p>
         <p className='read-link'>Click To Read</p>
     </div>
 
