@@ -30,9 +30,13 @@ export default function Home(){
     else{
         
         let empty:CardProps = 
-        {title:'Hello World',subtitle:'',content:'Welcome to my website',created:'',updated:''}
+        {title:'Hello World',subtitle:'',content:'Welcome to my website.',created:'',updated:''}
 
-        content = <Card {...empty}></Card>
+        content = <>
+        <Card {...empty}></Card>
+        <Card {...empty}></Card>
+        <Card {...empty}></Card>
+        </>
     }
     return(
         <>
