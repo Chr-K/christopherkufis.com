@@ -28,7 +28,6 @@ const router = createBrowserRouter([
       path:'/article/:ID',
       element:<Article></Article>,
       loader:async (ID)=>{
-        console.log(ID)
         return await fetch(`https://api.christopherkufis.com/article/${ID}`)
       }
     },
