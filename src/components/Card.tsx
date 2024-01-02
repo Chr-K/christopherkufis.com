@@ -11,7 +11,6 @@ export default function Card(card : CardProps){
     <div className="card" onClick={handleClick}>
         <p className='card-title'> {card.title} </p>
         <p className='card-content'> {card.subtitle} </p>
-        <p>ID={card.ID}</p>
         <p className='read-link'>Click To Read</p>
     </div>
 
