@@ -34,6 +34,9 @@ const router = createBrowserRouter([
         {
           method:"POST",
           body:data,
+          headers:{
+            'Content-Type':'application/json'
+          }
           
         }
         )
