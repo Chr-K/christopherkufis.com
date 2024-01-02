@@ -4,6 +4,6 @@ export default function Article(){
     const data = useLoaderData() as Array<CardProps>
     console.log(data)
         return(
-            <div></div>
+            <div dangerouslySetInnerHTML={{__html: data}}></div>
             )
 }
