@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       path:'/article/:ID',
       element:<Article></Article>,
       loader:async (req)=>{
-        let data = JSON.stringify(req.params.ID)
+        let data = JSON.stringify(req.params)
         console.log(data)
         return await fetch(`https://api.christopherkufis.com/article/`,
         {
