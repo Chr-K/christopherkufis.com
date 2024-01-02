@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 
 export interface CardProps{
     title:string,
     subtitle:string,
-    content:ReactNode,
+    content:string,
     created:string,
     updated:string,
     ID:number,
