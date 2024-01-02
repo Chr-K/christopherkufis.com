@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Card(card : CardProps){
     const navigate = useNavigate()
     function handleClick(){
+        console.log(card.ID)
         navigate(`/article/${card.ID}`)
     }
     console.log(card)
