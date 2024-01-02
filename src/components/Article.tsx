@@ -8,7 +8,7 @@ export default function Article(){
 
     return(
         <>
-        <div>Nothing to see here</div>
+        {data[0].content}
         </>
     )
 }
