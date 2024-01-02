@@ -4,5 +4,5 @@ export interface CardProps{
     content:string,
     created:string,
     updated:string,
-    id:number,
+    ID:number,
     }
