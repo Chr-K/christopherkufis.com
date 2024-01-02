@@ -7,8 +7,6 @@ export default function Article(){
         }
 
     return(
-        <>
-        {data[0].content}
-        </>
+        data[0].content
     )
 }
