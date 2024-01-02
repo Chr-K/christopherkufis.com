@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 export interface CardProps{
     title:string,
     subtitle:string,
-    content:string,
+    content:ReactNode,
     created:string,
     updated:string,
     ID:number,

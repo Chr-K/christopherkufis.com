@@ -30,7 +30,7 @@ export default function Home(){
     else{
         
         let empty:CardProps = 
-        {title:'Hello World',subtitle:'',content:'Welcome to my website.',created:'',updated:'',ID:0}
+        {title:'Hello World',subtitle:'',content:<p>123</p>,created:'',updated:'',ID:0}
 
         content = <>
         <Card {...empty}></Card>
