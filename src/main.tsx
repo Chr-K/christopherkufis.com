@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       element:<About></About>
     },
     {
-      path:'/article/:articleID',
+      path:'/article/:ID',
       element:<Article></Article>,
       loader:async (ID)=>{
         console.log(ID)

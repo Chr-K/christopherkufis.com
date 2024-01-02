@@ -8,7 +8,6 @@ export default function Card(card : CardProps){
         console.log(card.ID)
         navigate(`/article/${card.ID}`)
     }
-    console.log(card)
     return(
     <div className="card" onClick={handleClick}>
         <p className='card-title'> {card.title} </p>
