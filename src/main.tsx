@@ -29,7 +29,13 @@ const router = createBrowserRouter([
       element:<Article></Article>,
       loader:async (req)=>{
         let data = JSON.stringify(req.params.ID)
-        return await fetch(`https://api.christopherkufis.com/article/${data}`)
+        return await fetch(`https://api.christopherkufis.com/article/`,
+        {
+          method:"POST",
+          body:data,
+          
+        }
+        )
       }
     },
   ],
