@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom"
-
 export default function Article(){
     const data = useLoaderData() as Array<Object>
     let content
@@ -8,12 +7,11 @@ export default function Article(){
         }
         else{
             content = <div>Nothing to see here</div>
-
         }
 
     return(
         <>
-        {content}
+        <div>Nothing to see here</div>
         </>
     )
 }
