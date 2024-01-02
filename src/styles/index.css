@@ -72,5 +72,8 @@ body{
     .chris{
         margin:0;
     }
+    .content{
+        padding: 1rem;
+    }
   }
 
