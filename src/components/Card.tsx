@@ -7,12 +7,12 @@ export default function Card(card : CardProps){
     function handleClick(){
         navigate(`/article/${card.id}`)
     }
-
+    console.log(card)
     return(
     <div className="card" onClick={handleClick}>
         <p className='card-title'> {card.title} </p>
         <p className='card-content'> {card.content} </p>
-        <p>id{card.id}</p>
+        <p>ID={card.id}</p>
         <p className='read-link'>Click To Read</p>
     </div>
 
