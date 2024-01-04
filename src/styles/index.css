@@ -4,7 +4,9 @@ body{
   }
   a{
       color:black;
-      text-decoration: none;
+      text-decoration: underline;
+      text-underline-offset: 1rem;
+    
   }
   .nav h1{
       margin-left:5rem;
