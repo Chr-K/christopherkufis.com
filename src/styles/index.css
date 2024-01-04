@@ -5,8 +5,10 @@ body{
   a{
       color:black;
       text-decoration: underline;
-      text-underline-offset: 1rem;
-    
+      text-underline-offset: 3px;
+  }
+  a:hover{
+    color:rgb(32, 137, 171);
   }
   .nav h1{
       margin-left:5rem;
