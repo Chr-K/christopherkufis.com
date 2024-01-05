@@ -20,7 +20,7 @@ body{
       justify-content: space-between;
       width:100vw;
       border-bottom:1px solid black;
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
   }
   .nav-btn{
   display: flex;
