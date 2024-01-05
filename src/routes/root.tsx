@@ -1,10 +1,14 @@
-import { Outlet , Link } from "react-router-dom"
+import { Outlet , Link, useNavigate } from "react-router-dom"
 export default function Root(){
+    const navigate = useNavigate()
+    function handleClick(){
+        navigate('/')
+    }
 return(
     <>
     <div className="container">
     <div className="nav">
-            <span className="chris">Christopher Kufis</span>
+            <span className="chris" onClick={handleClick}>Christopher Kufis</span>
             <div className="nav-btn">
                 <Link to={"/"} >Home</Link>
             </div>
