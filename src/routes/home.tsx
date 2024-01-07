@@ -25,7 +25,7 @@ export default function Home(){
         articles.sort((a:CardProps,b:CardProps)=>{
             const dateA = new Date(a.created)
             const dateB = new Date(b.created)
-            return dateA.getTime() - dateB.getTime()
+            return dateB.getTime() - dateA.getTime()
         })
         content = articles.map((article:CardProps)=>(
             <Card {...article}></Card>
