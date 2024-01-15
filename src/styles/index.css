@@ -68,6 +68,13 @@ body{
       background-color: whitesmoke;
       cursor:pointer;
   }
+  .editor-images{
+    height:auto;
+    width:50%;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    margin-top:1rem;
+    }
   @media screen and (max-width: 950px) {
     .nav-btn{
         display:none;
